@@ -23,22 +23,18 @@
         HomeTheaterFacade homeTheater = new HomeTheaterFacade(
             projector, cdPlayer, dvdPlayer, lawOfDementer, popcornPopper, theaterLights, tuner, amplifier, screen
         );
-        
+
         homeTheater.watchMovie("Breaking bad");
             
-           // Console.WriteLine("Film opzetten ");
-           //
-           // homeTheaterFacade.setUp();
-           //
-           // Console.WriteLine("Film opgezet ");
-           //
-           // homeTheaterFacade.watchMovie("Breaking bad");
-           //
-           // Console.WriteLine("Speelt nu film af: Breaking bad");
-           //
-           // homeTheaterFacade.endMovie();
-           //
-           // Console.WriteLine("Film afgelopen, en uitgezet ");
+           Console.WriteLine("Speelt nu film af: Breaking bad");
+           
+           
+           
+           
+           
+           homeTheater.endMovie();
+           
+           Console.WriteLine("Film afgelopen, en uitgezet ");
            
         }
     }

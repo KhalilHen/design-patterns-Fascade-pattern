@@ -15,7 +15,6 @@ internal class HomeTheaterFacade
     private LawOfDementer lawOfDementer;
  public    HomeTheaterFacade(Projector projector, CdPlayer cdPlayer, DvdPlayer dvdPlayer, LawOfDementer lawOfDementer, PopcornPopper popcornPopper, TheaterLights theaterLights, Tuner tuner, Amplifier amplifier, Screen screen)
     {
-       // required   this.projector = projector;
           this.projector = projector;
         this.cdPlayer = cdPlayer;
         this.dvdPlayer = dvdPlayer;
