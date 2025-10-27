@@ -1,33 +1,35 @@
 namespace FacadePattern;
 
-public class HomeTheaterFacade
+internal class HomeTheaterFacade
 {
-    private Projector projector;
+
+
+    private  Amplifier amplifier;
     private CdPlayer cdPlayer;
     private DvdPlayer dvdPlayer;
-    private LawOfDementer lawOfDementer;
-    private PopcornPopper popcornPopper;
-    private TheaterLights theaterLights;
     private Tuner tuner;
-    private Amplifier amplifier;
+    private Projector projector;
     private Screen screen;
-
-
-
-    public void setUp()
+    private TheaterLights theaterLights;
+    private PopcornPopper popcornPopper;
+    private LawOfDementer lawOfDementer;
+ public    HomeTheaterFacade(Projector projector, CdPlayer cdPlayer, DvdPlayer dvdPlayer, LawOfDementer lawOfDementer, PopcornPopper popcornPopper, TheaterLights theaterLights, Tuner tuner, Amplifier amplifier, Screen screen)
     {
-        amplifier = new Amplifier();
-        cdPlayer = new CdPlayer(amplifier);
-        dvdPlayer = new DvdPlayer(amplifier);
-        tuner = new Tuner(amplifier);
-         projector = new Projector();
-         lawOfDementer = new LawOfDementer();
-         popcornPopper = new PopcornPopper();
-         theaterLights = new TheaterLights();
-         screen = new Screen();
-
-
+       // required   this.projector = projector;
+          this.projector = projector;
+        this.cdPlayer = cdPlayer;
+        this.dvdPlayer = dvdPlayer;
+        this.lawOfDementer = lawOfDementer;
+        this.popcornPopper = popcornPopper;
+        this.theaterLights = theaterLights;
+        this.tuner = tuner;
+        this.amplifier = amplifier;
+        this.screen = screen;
     }
+  
+
+
+   
   public void    watchMovie(String movieName)
   {
       popcornPopper.On();
@@ -69,6 +71,8 @@ public class HomeTheaterFacade
 
       dvdPlayer.Off();
       dvdPlayer.Stop();
+   // Moet ik hier nadat film uitgezet is de instantie  verbreken?   
+      
   }
 
 }
